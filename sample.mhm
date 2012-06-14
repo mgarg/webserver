@@ -1,0 +1,41 @@
+<html>
+<head>
+<style type = "text/css">
+body {background-color:#b0c4de;}
+</style>
+</head>
+<body>
+<h1 align = "center"><big><big>ELECTION FORUM</big></big></h1>
+<a href = "voter.htm"><big>voter registration</big></a><br>
+<a href = "result.php"><big>election results</big></a>
+<br><br><br>
+<?python
+	echo ("<table width = '1000' border='0'align ='center' cellspacing ='10'>")
+	
+	list = [("anuj", "tulip.jpg"), ("mahak", "
+	while($row = mysql_fetch_object($can))
+	{
+		$list[$row->post][$row->id]['name'] = $row->name;
+		$list[$row->post][$row->id]['photo'] = $row->photo;
+	}
+	foreach($list as $post=>$val)
+	{
+		echo "<tr><td rowspan = '2' align = 'center'><big><big> " . $post. "</big></big></td></tr>";
+		echo "<tr>";
+		foreach($val as $candid => $cand)
+		{
+			echo "<td align = 'center'>"."<img src =".$cand['photo']." height = '100' width = '100'>"."</td>";
+		}
+		echo "</tr><tr>";
+		echo "<td></td>";
+		foreach($val as $candid => $cand)
+		{
+			echo "<td align = 'center'>".$cand['name']."</td>";
+		}
+		echo "</tr>";
+			
+	}
+	echo("</table>")	
+?>
+</body>
+</html>
